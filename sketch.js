@@ -1,4 +1,4 @@
-const Engine = Matter.Engine;
+iconst Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
 
@@ -14,8 +14,8 @@ function setup(){
     var canvas = createCanvas(1200,400);
     engine = Engine.create();
     world = engine.world;
-
-    
+	
+    platform = new Ground(150,305,300,170);
     ground = new Ground(600,height,1200,20)
 
     box1 = new Box(700,320,70,70);
@@ -48,7 +48,7 @@ function draw(){
     ground.display();
     pig1.display();
     log1.display();
-
+    
     box3.display();
     box4.display();
     pig3.display();
@@ -58,5 +58,6 @@ function draw(){
     log4.display();
     log5.display();
 
+    platform.display();
     bird.display();
 }
